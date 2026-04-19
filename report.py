@@ -44,13 +44,13 @@ def print_report(results: list[dict], scorer_name: str):
 
     # ── Print ─────────────────────────────────────────────────────────────────
     print("\n")
-    print("╔══════════════════════════════════════════════════════╗")
-    print("║              📊  EVALUATION REPORT                   ║")
-    print("╠══════════════════════════════════════════════════════╣")
+    print("╔════════════════════════════════════════════════════════╗")
+    print("║              📊  EVALUATION REPORT                    ║")
+    print("╠════════════════════════════════════════════════════════╣")
     print(f"║  Scorer      : {scorer_name:<37}  ║")
     print(f"║  Total items : {len(results):<37} ║")
     print(f"║  Passed      : {len(passed)}/{len(results):<35}║")
-    print(f"║  Pass rate   : {pass_rate * 100:>5.1f}%  {_bar(pass_rate):<28}║")
+    print(f"║  Pass rate   : {pass_rate * 100:>5.1f}%  {_bar(pass_rate):<28} ║")
     if avg_norm is not None:
         print(f"║  Avg score   : {avg_norm * 100:>5.1f}%  {_bar(avg_norm):<28}║")
     if avg_latency:
@@ -75,7 +75,7 @@ def print_report(results: list[dict], scorer_name: str):
         reason = sr.get("reason", "")[:30]
         print(f"║    {label:<22}  {reason:<28}║")
 
-    print("╚══════════════════════════════════════════════════════╝")
+    print("╚═══════════════════════════════════════════════════════════╝")
     print()
 
 

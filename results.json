@@ -1,25 +1,25 @@
 {
-  "run_at": "2026-04-19T14:54:16.666010",
+  "run_at": "2026-04-19T15:48:52.612655",
   "model": "llama-3.3-70b-versatile",
-  "scorer": "llm_judge",
-  "total": 8,
+  "scorer": "human",
+  "total": 20,
   "results": [
     {
       "id": "q001",
       "input": "What is the capital of France?",
       "expected": "Paris",
       "actual": "The capital of France is Paris.",
-      "latency_ms": 480,
+      "latency_ms": 535,
       "tags": [
         "geography",
         "factual"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is accurate, complete, and clear, perfectly matching the expected answer by stating that the capital of France is indeed Paris."
+        "reason": "\u2014"
       }
     },
     {
@@ -27,35 +27,35 @@
       "input": "What does HTTP stand for?",
       "expected": "HyperText Transfer Protocol",
       "actual": "HTTP stands for HyperText Transfer Protocol.",
-      "latency_ms": 122,
+      "latency_ms": 176,
       "tags": [
         "technology",
         "factual"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is entirely accurate, complete, and clear, perfectly matching the expected answer."
+        "reason": "\u2014"
       }
     },
     {
       "id": "q003",
       "input": "Explain what a large language model is in one sentence.",
       "expected": "A large language model is an AI system trained on vast amounts of text data to understand and generate human language.",
-      "actual": "A large language model is a type of artificial intelligence designed to process and understand human language, typically trained on vast amounts of text data to generate human-like responses, answer questions, and perform various language-related tasks.",
-      "latency_ms": 193,
+      "actual": "A large language model is a type of artificial intelligence designed to process and understand human language, trained on vast amounts of text data to generate human-like responses and perform tasks such as translation, summarization, and conversation.",
+      "latency_ms": 364,
       "tags": [
         "AI",
         "explanation"
       ],
       "score_result": {
-        "method": "llm_judge",
-        "score": 4,
+        "method": "human",
+        "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The response is mostly correct and provides more detailed information than the expected answer, but it does not exactly match the concise and straightforward expected answer."
+        "reason": "\u2014"
       }
     },
     {
@@ -63,17 +63,17 @@
       "input": "What is 15% of 200?",
       "expected": "30",
       "actual": "To find 15% of 200, multiply 200 by 0.15. \n\n200 * 0.15 = 30\n\nSo, 15% of 200 is 30.",
-      "latency_ms": 133,
+      "latency_ms": 190,
       "tags": [
         "math",
         "calculation"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is accurate, clear, and provides a step-by-step calculation to arrive at the correct answer, which matches the expected ideal answer of 30."
+        "reason": "\u2014"
       }
     },
     {
@@ -81,71 +81,287 @@
       "input": "Who wrote the play Romeo and Juliet?",
       "expected": "William Shakespeare",
       "actual": "The play \"Romeo and Juliet\" was written by William Shakespeare.",
-      "latency_ms": 109,
+      "latency_ms": 284,
       "tags": [
         "literature",
         "factual"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is accurate, complete, and clear, matching the expected answer well by correctly identifying William Shakespeare as the author of the play \"Romeo and Juliet\"."
+        "reason": "\u2014"
       }
     },
     {
       "id": "q006",
       "input": "What is the difference between a list and a tuple in Python?",
       "expected": "Lists are mutable (can be changed after creation) while tuples are immutable (cannot be changed). Lists use square brackets [] and tuples use parentheses ().",
-      "actual": "**Key differences:**\n\n1. **Immutability**: Tuples are immutable, while lists are mutable.\n2. **Syntax**: Tuples use parentheses `()`, while lists use square brackets `[]`.\n3. **Performance**: Tuples are faster and more memory-efficient due to their immutability.\n4. **Use cases**: Lists are suitable for dynamic data, while tuples are suitable for static data that shouldn't be changed.\n\n**Example:**\n```python\n# List (mutable)\nmy_list = [1, 2, 3]\nmy_list[0] = 4  # allowed\nprint(my_list)  # [4, 2, 3]\n\n# Tuple (immutable)\nmy_tuple = (1, 2, 3)\n# my_tuple[0] = 4  # raises TypeError\nprint(my_tuple)  # (1, 2, 3)\n```",
-      "latency_ms": 563,
+      "actual": "**Key Differences:**\n\n1. **Immutability**: Tuples are immutable, meaning their contents cannot be changed after creation. Lists are mutable, allowing elements to be added, removed, or modified.\n2. **Syntax**: Tuples use parentheses `()` and lists use square brackets `[]`.\n3. **Performance**: Tuples are generally faster and more memory-efficient than lists due to their immutability.\n4. **Use Cases**: Tuples are suitable for representing constant collections or records, while lists are better for dynamic data that needs to be modified.\n\n**Example:**\n```python\n# Tuple (immutable)\nmy_tuple = (1, 2, 3)\n# my_tuple[0] = 10  # Raises an error\n\n# List (mutable)\nmy_list = [1, 2, 3]\nmy_list[0] = 10  # Valid operation\n```",
+      "latency_ms": 656,
       "tags": [
         "programming",
         "python"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is accurate, complete, clear, and thoroughly explains the difference between lists and tuples in Python, including examples and use cases."
+        "reason": "\u2014"
       }
     },
     {
       "id": "q007",
       "input": "What causes the seasons on Earth?",
       "expected": "Earth's seasons are caused by its axial tilt of about 23.5 degrees as it orbits the Sun, not by its distance from the Sun.",
-      "actual": "The seasons on Earth are caused by the planet's tilt (about 23.5 degrees) on its axis as it orbits the Sun. This tilt leads to changes in the amount of sunlight that reaches the Earth's surface throughout the year.\n\nAs the Earth rotates, different parts of the planet receive varying amounts of sunlight, resulting in seasonal changes:\n\n1. **Summer**: When the Northern Hemisphere is tilted towards the Sun, it receives more direct sunlight, leading to longer days and warmer temperatures.\n2. **Winter**: When the Northern Hemisphere is tilted away from the Sun, it receives less sunlight, resulting in shorter days and colder temperatures.\n3. **Spring** and **Autumn**: These seasons occur when the Earth's axis is neither tilted towards nor away from the Sun, resulting in moderate temperatures and daylight hours.\n\nThis tilt and orbit combination creates the cycle of seasons, with the same pattern repeating every year. The seasons are reversed in the Southern Hemisphere, as it is tilted towards or away from the Sun at opposite times of the year.",
-      "latency_ms": 655,
+      "actual": "The seasons on Earth are caused by the planet's tilt on its axis (about 23.5 degrees) and its orbit around the Sun. As the Earth rotates, different parts of the planet receive varying amounts of sunlight throughout the year, resulting in changes in temperature and weather patterns.\n\nHere's a simplified explanation:\n\n1. **Axial tilt**: The Earth's axis is tilted, which means that the amount of sunlight that reaches the planet's surface varies throughout the year.\n2. **Orbit**: The Earth orbits the Sun in an elliptical path, but the distance from the Sun is relatively constant.\n3. **Seasonal changes**: As the Earth orbits the Sun, the tilt of its axis causes different parts of the planet to receive more or less sunlight, resulting in seasonal changes:\n\t* **Summer**: The Northern or Southern Hemisphere is tilted towards the Sun, receiving more direct sunlight and longer days, resulting in warmer temperatures.\n\t* **Winter**: The Northern or Southern Hemisphere is tilted away from the Sun, receiving less direct sunlight and shorter days, resulting in colder temperatures.\n\t* **Spring** and **Autumn**: The Earth's axis is neither fully tilted towards nor away from the Sun, resulting in moderate temperatures and daylight hours.\n\nThis combination of axial tilt and orbit around the Sun creates the changing seasons we experience on Earth.",
+      "latency_ms": 792,
       "tags": [
         "science",
         "explanation"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot's response is accurate, complete, and clearly explains the cause of seasons on Earth, matching the expected answer well and providing additional relevant details."
+        "reason": "\u2014"
       }
     },
     {
       "id": "q008",
       "input": "How do you reverse a string in Python?",
       "expected": "You can reverse a string in Python using slicing: my_string[::-1]",
-      "actual": "You can reverse a string in Python using slicing, the `reversed` function, or the `[::-1]` syntax. Here are a few ways to do it:\n\n1. **Slicing**: `my_string[::-1]`\n2. **Reversed function**: `''.join(reversed(my_string))`\n3. **Looping**: \n```python\nmy_string = \"Hello\"\nreversed_string = \"\"\nfor char in my_string:\n    reversed_string = char + reversed_string\n```\nThe most common and efficient way is to use slicing: `my_string[::-1]`. \n\nExample:\n```python\nmy_string = \"Hello\"\nreversed_string = my_string[::-1]\nprint(reversed_string)  # Output: \"olleH\"\n```",
-      "latency_ms": 479,
+      "actual": "You can reverse a string in Python using the following methods:\n\n1. **Slicing**: `reversed_string = original_string[::-1]`\n2. **Built-in function**: `reversed_string = ''.join(reversed(original_string))`\n3. **Loop**: \n   ```\n   original_string = \"hello\"\n   reversed_string = \"\"\n   for char in original_string:\n       reversed_string = char + reversed_string\n   ```\n\nHowever, the most Pythonic way is using slicing: `original_string[::-1]`. \n\nExample:\n```python\noriginal_string = \"hello\"\nreversed_string = original_string[::-1]\nprint(reversed_string)  # Output: \"olleh\"\n```",
+      "latency_ms": 683,
       "tags": [
         "programming",
         "python"
       ],
       "score_result": {
-        "method": "llm_judge",
+        "method": "human",
         "score": 5,
         "max_score": 5,
         "passed": true,
-        "reason": "The chatbot response is accurate, complete, and clear, providing not only the expected slicing method but also additional alternatives and a practical example to demonstrate the solution."
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q009",
+      "input": "In which year did World War II end?",
+      "expected": "1945",
+      "actual": "World War II ended in 1945. The war in Europe ended on May 8, 1945, and the war in the Pacific ended on September 2, 1945.",
+      "latency_ms": 393,
+      "tags": [
+        "history",
+        "factual"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q010",
+      "input": "What is the largest continent by area?",
+      "expected": "Asia",
+      "actual": "The largest continent by area is Asia, covering approximately 44,579,000 square kilometers (17,212,000 square miles).",
+      "latency_ms": 177,
+      "tags": [
+        "geography",
+        "factual"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q011",
+      "input": "Which country was the first to land a human on the Moon?",
+      "expected": "The United States of America landed the first humans on the Moon in 1969 during the Apollo 11 mission.",
+      "actual": "The United States was the first country to land a human on the Moon. NASA's Apollo 11 mission, crewed by astronauts Neil Armstrong, Buzz Aldrin, and Michael Collins, successfully landed on the Moon's surface on July 20, 1969.",
+      "latency_ms": 222,
+      "tags": [
+        "history",
+        "science"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q012",
+      "input": "What is the difference between supervised and unsupervised learning in AI?",
+      "expected": "Supervised learning trains a model on labeled data where the correct output is known, while unsupervised learning finds patterns in unlabeled data without predefined correct answers.",
+      "actual": "In Artificial Intelligence (AI), the main difference between supervised and unsupervised learning is the type of data used to train the model and the learning objective.\n\n**Supervised Learning:**\n\n* The model is trained on labeled data, where each example is associated with a target output or response.\n* The goal is to learn a mapping between input data and the corresponding output labels.\n* The model learns to make predictions based on the labeled data, and its performance is evaluated using metrics such as accuracy, precision, and recall.\n* Examples: image classification, sentiment analysis, regression.\n\n**Unsupervised Learning:**\n\n* The model is trained on unlabeled data, and there is no target output or response.\n* The goal is to identify patterns, relationships, or structure in the data.\n* The model learns to group similar data points together, identify anomalies, or reduce the dimensionality of the data.\n* Examples: clustering, dimensionality reduction, density estimation.\n\nIn summary, supervised learning focuses on making predictions based on labeled data, while unsupervised learning focuses on discovering patterns and relationships in unlabeled data.",
+      "latency_ms": 748,
+      "tags": [
+        "AI",
+        "explanation"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q013",
+      "input": "What does GPU stand for and why is it important for AI?",
+      "expected": "GPU stands for Graphics Processing Unit. It is important for AI because it can perform many parallel computations simultaneously, which greatly speeds up the training of deep learning models.",
+      "actual": "GPU stands for Graphics Processing Unit. It's important for AI because it can quickly process large amounts of data in parallel, making it well-suited for complex AI computations, such as deep learning and neural networks. This enables faster and more efficient training of AI models.",
+      "latency_ms": 340,
+      "tags": [
+        "AI",
+        "technology"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q014",
+      "input": "What is the powerhouse of the cell?",
+      "expected": "The mitochondria is the powerhouse of the cell. It produces energy in the form of ATP through a process called cellular respiration.",
+      "actual": "The powerhouse of the cell is the mitochondria. Mitochondria are organelles found in the cells of most eukaryotes, responsible for generating most of the cell's supply of adenosine triphosphate (ATP), which is used as a source of chemical energy.",
+      "latency_ms": 270,
+      "tags": [
+        "science",
+        "biology"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q015",
+      "input": "What is the speed of light?",
+      "expected": "The speed of light in a vacuum is approximately 299,792,458 metres per second, commonly approximated as 300,000 kilometres per second.",
+      "actual": "The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s) or 186,282 miles per second (mi/s).",
+      "latency_ms": 197,
+      "tags": [
+        "science",
+        "physics"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q016",
+      "input": "Which empire was Julius Caesar a part of?",
+      "expected": "Julius Caesar was a part of the Roman Republic, which later transitioned into the Roman Empire after his assassination.",
+      "actual": "Julius Caesar was a part of the Roman Empire, specifically the Roman Republic at the time, as the Roman Empire did not officially exist until after his assassination in 44 BCE. He played a crucial role in the transformation of the Roman Republic into the Roman Empire under his adopted son, Octavian (later known as Augustus).",
+      "latency_ms": 459,
+      "tags": [
+        "history",
+        "factual"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q017",
+      "input": "What is the capital city of Canada?",
+      "expected": "Ottawa",
+      "actual": "The capital city of Canada is Ottawa.",
+      "latency_ms": 207,
+      "tags": [
+        "geography",
+        "factual"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q018",
+      "input": "What is overfitting in machine learning?",
+      "expected": "Overfitting occurs when a machine learning model learns the training data too well, including its noise and outliers, causing it to perform poorly on new unseen data.",
+      "actual": "**Overfitting** in machine learning refers to a situation where a model is too complex and learns the training data too well, capturing noise and random fluctuations in the data. As a result, the model performs poorly on new, unseen data. This occurs when the model has:\n\n* Too many parameters\n* Too much capacity to fit the data\n* Not enough regularization\n\nOverfitting can be identified by:\n\n* High training accuracy\n* Low testing accuracy\n* Large difference between training and testing errors\n\nTo prevent overfitting, techniques such as:\n\n* **Regularization** (e.g., L1, L2)\n* **Early stopping**\n* **Dropout**\n* **Data augmentation**\n* **Ensemble methods**\n\ncan be used to reduce the model's capacity and improve its generalization to new data.",
+      "latency_ms": 629,
+      "tags": [
+        "AI",
+        "explanation"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 4,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q019",
+      "input": "How many planets are in our solar system?",
+      "expected": "There are 8 planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+      "actual": "There are 8 planets in our solar system: \n1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune\n\nNote: Pluto was previously considered a planet but is now classified as a dwarf planet.",
+      "latency_ms": 449,
+      "tags": [
+        "science",
+        "general-knowledge"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
+      }
+    },
+    {
+      "id": "q020",
+      "input": "What is the boiling point of water at sea level?",
+      "expected": "The boiling point of water at sea level is 100 degrees Celsius or 212 degrees Fahrenheit.",
+      "actual": "The boiling point of water at sea level is 212\u00b0F (100\u00b0C).",
+      "latency_ms": 179,
+      "tags": [
+        "science",
+        "general-knowledge"
+      ],
+      "score_result": {
+        "method": "human",
+        "score": 5,
+        "max_score": 5,
+        "passed": true,
+        "reason": "\u2014"
       }
     }
   ]

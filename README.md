@@ -1,4 +1,4 @@
-# 🧪 LLM Evaluation Project — Groq (Free)
+# 🧪 LLM Evaluation Project — Groq
 
 Evaluate LLM responses on Q&A tasks using **Groq's free API** (Llama 3.3 70B).
 No credit card required.

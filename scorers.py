@@ -67,34 +67,6 @@ def llm_judge(question: str, expected: str, actual: str) -> dict:
     }
 
 
-# ── 2. Exact / Keyword Match ──────────────────────────────────────────────────
-
-def exact_match(question: str, expected: str, actual: str) -> dict:
-    """
-    Check whether key terms from the expected answer appear in the actual response.
-    Scores 1.0 if ALL keywords found, partial credit for partial matches.
-    """
-    keywords = [w.lower() for w in expected.split() if len(w) > 3]
-    if not keywords:
-        keywords = expected.lower().split()
-
-    actual_lower = actual.lower()
-    matched = [kw for kw in keywords if kw in actual_lower]
-
-    ratio = len(matched) / len(keywords) if keywords else 0
-    score = round(ratio, 2)
-
-    return {
-        "method": "exact_match",
-        "score": score,
-        "max_score": 1.0,
-        "passed": score >= 0.6,
-        "matched_keywords": matched,
-        "total_keywords": keywords,
-        "reason": f"{len(matched)}/{len(keywords)} keywords matched",
-    }
-
-
 # ── 3. Human Review ───────────────────────────────────────────────────────────
 
 def human_review(question: str, expected: str, actual: str) -> dict:
@@ -130,7 +102,6 @@ def human_review(question: str, expected: str, actual: str) -> dict:
 
 SCORERS = {
     "llm_judge": llm_judge,
-    "exact_match": exact_match,
     "human": human_review,
 }
 
